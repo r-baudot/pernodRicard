@@ -1,0 +1,68 @@
+import { Brand } from '@/types';
+
+export const brandsData: Brand[] = [
+  {
+    id: 'absolut',
+    name: 'Absolut Vodka',
+    description: 'One of the world\'s leading premium vodka brands',
+    country: 'Sweden',
+    imageUrl: '/images/brands/absolut.jpg',
+    category: 'vodka',
+  },
+  {
+    id: 'jameson',
+    name: 'Jameson',
+    description: 'Ireland\'s legendary whiskey, enjoyed worldwide',
+    country: 'Ireland',
+    imageUrl: '/images/brands/jameson.jpg',
+    category: 'whiskey',
+  },
+  {
+    id: 'chivas',
+    name: 'Chivas Regal',
+    description: 'Luxury blended Scotch whisky',
+    country: 'Scotland',
+    imageUrl: '/images/brands/chivas.jpg',
+    category: 'whisky',
+  },
+  {
+    id: 'mumm',
+    name: 'Mumm',
+    description: 'Prestigious French champagne house',
+    country: 'France',
+    imageUrl: '/images/brands/mumm.jpg',
+    category: 'champagne',
+  },
+  {
+    id: 'martell',
+    name: 'Martell',
+    description: 'The oldest of the great cognac houses',
+    country: 'France',
+    imageUrl: '/images/brands/martell.jpg',
+    category: 'cognac',
+  },
+  {
+    id: 'beefeater',
+    name: 'Beefeater',
+    description: 'Authentic London Dry Gin',
+    country: 'England',
+    imageUrl: '/images/brands/beefeater.jpg',
+    category: 'gin',
+  },
+  {
+    id: 'havana-club',
+    name: 'Havana Club',
+    description: 'Authentic Cuban rum',
+    country: 'Cuba',
+    imageUrl: '/images/brands/havana-club.jpg',
+    category: 'rum',
+  },
+  {
+    id: 'malibu',
+    name: 'Malibu',
+    description: 'Caribbean rum with coconut flavor',
+    country: 'Barbados',
+    imageUrl: '/images/brands/malibu.jpg',
+    category: 'rum',
+  },
+];
