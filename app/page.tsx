@@ -5,6 +5,8 @@ import { Footer } from "@/components/Footer";
 import { heroSlides } from "@/data/hero";
 import { brandsData } from "@/data/brands";
 import { Bloc } from "@/components/Bloc/Bloc";
+import { Bloc2Columns } from "@/components/Bloc2Columns/Bloc2Columns";
+import { DownloadLink } from "@/components/DownloadLink/DownloadLink";
 
 export default function Home() {
   return (
@@ -18,6 +20,28 @@ export default function Home() {
         textColor="#FFFFFF"
         classNameTxt="my-8 text-lg md:text-xl"
       />
+
+      <Bloc2Columns
+        imageSrc="/images/homepage/13.jpg.avif"
+        imageAlt="Pernod Ricard"
+        backgroundColor="#FBF4E7"
+        textColor="#222d38"
+        maxWidth="1200px"
+        firstColumnWidth={70}
+      >
+        <h2 className="text-3xl md:text-4xl font-bold mb-4 leading-tight">
+          Célébrons notre esprit intemporel
+        </h2>
+        <p className="text-base md:text-lg leading-relaxed mb-4">
+          Le rapport annuel intégré 2024/25 de Pernod Ricard est maintenant
+          disponible. Il présente des illustrations personnalisées, réalisées
+          par trois diplômés de l&apos;École des Arts Décoratifs – PSL.
+        </p>
+        <DownloadLink
+          text="Télécharger le rapport annuel"
+          file="/pdf/Pernod_Ricard_IAR25_FRENCH.pdf"
+        />
+      </Bloc2Columns>
 
       <section className="py-16 bg-white">
         <div className="w-full px-4 lg:px-8">
@@ -46,7 +70,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       <section className="py-16 bg-gradient-to-br from-accent-burgundy to-primary text-white">
         <div className="w-full px-4 lg:px-8 text-center">
           <h2 className="text-4xl font-serif font-bold mb-4">
@@ -65,9 +88,7 @@ export default function Home() {
           </a>
         </div>
       </section>
-
       <BrandGrid brands={brandsData} />
-
       <section className="py-16 bg-white">
         <div className="w-full px-4 lg:px-8">
           <h2 className="text-4xl font-serif font-bold text-center mb-12">
@@ -103,7 +124,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       <Footer />
     </main>
   );
