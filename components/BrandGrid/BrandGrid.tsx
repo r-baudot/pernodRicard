@@ -9,7 +9,7 @@ interface BrandGridProps {
 export function BrandGrid({ brands }: BrandGridProps) {
   return (
     <section className="py-16 bg-secondary">
-      <div className="container mx-auto px-4">
+      <div className="w-full px-4 lg:px-8">
         <h2 className="text-4xl font-serif font-bold text-center mb-4">
           Our Brands
         </h2>

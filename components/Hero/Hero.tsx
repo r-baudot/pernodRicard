@@ -44,7 +44,7 @@ export function Hero({ slides }: HeroProps) {
 
           {/* Content */}
           <div className="absolute inset-0 flex items-center justify-center">
-            <div className="container mx-auto px-4 text-center text-white">
+            <div className="w-full px-4 lg:px-8 text-center text-white">
               <h1 className="text-5xl md:text-7xl font-serif font-bold mb-4 animate-fadeIn">
                 {slide.title}
               </h1>
