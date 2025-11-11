@@ -3,18 +3,25 @@ import { HeroSlide } from "@/types";
 export const heroSlides: HeroSlide[] = [
   {
     id: "1",
-    title: "Créateurs de Convivialité",
-    subtitle: "Creating moments of connection around the world",
+    title: "Nous sommes des créateurs de convivialité",
+    subtitle:
+      "Pernod Ricard est le leader mondial des champagnes et spiritueux premium internationaux. Nos marques iconiques reflètent notre passion pour le développement de nos produits et pour les relations humaines.",
     imageUrl: "/images/homepage/slider/1.jpg",
-    ctaText: "Discover Our Story",
-    ctaLink: "/group/about",
   },
   {
     id: "2",
-    title: "Our Premium Brands",
-    subtitle: "A portfolio of exceptional spirits and wines",
+    title: "Abeilles, un engagement pour la biodiversité",
+    subtitle:
+      "Pernod Ricard s'engage pour la préservation de la biodiversité en soutenant des initiatives en faveur des abeilles et de leur habitat.",
     imageUrl: "/images/homepage/slider/2.jpg",
-    ctaText: "Explore Brands",
-    ctaLink: "/brands",
+  },
+  {
+    id: "3",
+    title: "Nous sommes des créateurs de convivialité",
+    subtitle:
+      "Pernod Ricard est le leader mondial des champagnes et spiritueux premium internationaux. Nos marques iconiques reflètent notre passion pour le développement de nos produits et pour les relations humaines.",
+    imageUrl: "/images/homepage/slider/1.jpg",
+    ctaLink: "/our-brands",
+    ctaText: "Découvrez nos marques",
   },
 ];
