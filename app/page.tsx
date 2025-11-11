@@ -4,16 +4,21 @@ import { BrandGrid } from "@/components/BrandGrid";
 import { Footer } from "@/components/Footer";
 import { heroSlides } from "@/data/hero";
 import { brandsData } from "@/data/brands";
+import { Bloc } from "@/components/Bloc/Bloc";
 
 export default function Home() {
   return (
     <main className="min-h-screen">
       <Header />
-
-      {/* Hero Section */}
       <Hero slides={heroSlides} />
+      <Bloc
+        text="La convivialité est au cœur de tout ce que nous faisons, de nos vignobles à nos distilleries, en passant par nos sites de production ainsi qu’au sein de nos bureaux présents à travers le monde. Nous nous engageons à offrir à nos consommateurs des produits et des expériences à la pointe de l’innovation, tout en veillant à garantir un avenir durable, respectueux de notre environnement et riche de nos relations humaines."
+        backgroundColor="#222D38"
+        maxWidth="960px"
+        textColor="#FFFFFF"
+        classNameTxt="my-8 text-lg md:text-xl"
+      />
 
-      {/* Annual Report Section */}
       <section className="py-16 bg-white">
         <div className="w-full px-4 lg:px-8">
           <div className="flex flex-col lg:flex-row items-center gap-8">
@@ -42,7 +47,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Sustainability Section */}
       <section className="py-16 bg-gradient-to-br from-accent-burgundy to-primary text-white">
         <div className="w-full px-4 lg:px-8 text-center">
           <h2 className="text-4xl font-serif font-bold mb-4">
@@ -50,8 +54,8 @@ export default function Home() {
           </h2>
           <p className="text-lg mb-8 max-w-2xl mx-auto">
             Our commitment to sustainability and responsibility drives
-            everything we do. Discover how we're building a better future for
-            all.
+            everything we do. Discover how we&apos;re building a better future
+            for all.
           </p>
           <a
             href="/commitments"
@@ -62,10 +66,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Brands Section */}
       <BrandGrid brands={brandsData} />
 
-      {/* Media Section */}
       <section className="py-16 bg-white">
         <div className="w-full px-4 lg:px-8">
           <h2 className="text-4xl font-serif font-bold text-center mb-12">

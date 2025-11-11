@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/nextjs';
 import { BrandGrid } from './BrandGrid';
 import { brandsData } from '@/data/brands';
 
