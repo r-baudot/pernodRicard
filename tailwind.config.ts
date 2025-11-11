@@ -20,6 +20,7 @@ const config: Config = {
         accent: {
           gold: '#d4af37',
           burgundy: '#800020',
+          blue: '#5fa4d0',
         },
       },
       fontFamily: {
