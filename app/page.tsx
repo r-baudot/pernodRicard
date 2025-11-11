@@ -42,34 +42,30 @@ export default function Home() {
           file="/pdf/Pernod_Ricard_IAR25_FRENCH.pdf"
         />
       </Bloc2Columns>
+      <Bloc2Columns
+        imageSrc="/images/homepage/web_image-kahlua-coffee_2.jpg.avif"
+        imageAlt="Pernod Ricard"
+        backgroundColor="#FFFFFF"
+        textColor="#222d38"
+        maxWidth="1200px"
+        imagePosition="left"
+        imageWidth={30}
+      >
+        <h2 className="text-3xl md:text-4xl font-bold mb-4 leading-tight">
+          Un nouveau chapitre RSE
+        </h2>
+        <p className="text-base md:text-lg leading-relaxed mb-4">
+          Chaque bouteille de Pernod Ricard raconte une histoire, pas seulement
+          celle de son contenu, mais aussi celle de notre engagement envers
+          notre planète et nos communautés. Découvrez notre nouvelle feuille de
+          route.
+        </p>
+        <DownloadLink
+          text="Télécharger le rapport annuel"
+          file="/pdf/Pernod_Ricard_IAR25_FRENCH.pdf"
+        />
+      </Bloc2Columns>
 
-      <section className="py-16 bg-white">
-        <div className="w-full px-4 lg:px-8">
-          <div className="flex flex-col lg:flex-row items-center gap-8">
-            <div className="lg:w-1/2">
-              <h2 className="text-4xl font-serif font-bold mb-4">
-                Annual Report 2024/2025
-              </h2>
-              <p className="text-gray-600 mb-6">
-                Discover our latest integrated annual report, highlighting our
-                performance, strategy, and commitment to creating sustainable
-                value.
-              </p>
-              <a
-                href="/investors/reports"
-                className="inline-block bg-primary text-white px-6 py-3 rounded-full font-semibold hover:bg-primary-light transition-colors"
-              >
-                View Report
-              </a>
-            </div>
-            <div className="lg:w-1/2">
-              <div className="aspect-video bg-gray-200 rounded-lg flex items-center justify-center">
-                <span className="text-gray-400">Annual Report Preview</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
       <section className="py-16 bg-gradient-to-br from-accent-burgundy to-primary text-white">
         <div className="w-full px-4 lg:px-8 text-center">
           <h2 className="text-4xl font-serif font-bold mb-4">
@@ -88,6 +84,7 @@ export default function Home() {
           </a>
         </div>
       </section>
+
       <BrandGrid brands={brandsData} />
       <section className="py-16 bg-white">
         <div className="w-full px-4 lg:px-8">

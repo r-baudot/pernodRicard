@@ -9,7 +9,9 @@ interface Bloc2ColumnsProps {
   textColor?: string;
   maxWidth?: string;
   imagePosition?: "left" | "right";
-  firstColumnWidth?: number; // Percentage width for first column (0-100)
+  firstColumnWidth?: number; // Percentage width for text column (0-100) - DEPRECATED, use textWidth instead
+  textWidth?: number; // Percentage width for text column (0-100)
+  imageWidth?: number; // Percentage width for image column (0-100)
   className?: string;
 }
 
@@ -21,33 +23,62 @@ export function Bloc2Columns({
   textColor = "#000000",
   maxWidth,
   imagePosition = "right",
-  firstColumnWidth = 50,
+  firstColumnWidth,
+  textWidth,
+  imageWidth,
   className = "",
 }: Bloc2ColumnsProps) {
-  const secondColumnWidth = 100 - firstColumnWidth;
+  // Calculate widths based on what's provided
+  let finalTextWidth = 50;
+  let finalImageWidth = 50;
+
+  if (imageWidth !== undefined) {
+    finalImageWidth = imageWidth;
+    finalTextWidth = 100 - imageWidth;
+  } else if (textWidth !== undefined) {
+    finalTextWidth = textWidth;
+    finalImageWidth = 100 - textWidth;
+  } else if (firstColumnWidth !== undefined) {
+    // Backward compatibility
+    finalTextWidth = firstColumnWidth;
+    finalImageWidth = 100 - firstColumnWidth;
+  }
+
+  const uniqueId = Math.random().toString(36).substring(7);
 
   return (
     <div
-      className={`md:py-12 md:px-4 lg:px-8 ${className}`}
+      className={`md:py-12 ${className}`}
       style={{
         backgroundColor,
       }}
     >
       <div
-        className="mx-auto"
+        className="px-4 lg:px-8 mx-auto"
         style={{
           maxWidth: maxWidth,
         }}
       >
-        <div className="flex flex-col md:flex-row md:gap-8 items-center">
+        <style dangerouslySetInnerHTML={{
+          __html: `
+            @media (min-width: 768px) {
+              .bloc2col-image-${uniqueId} {
+                width: ${finalImageWidth}% !important;
+                max-width: ${finalImageWidth}%;
+              }
+              .bloc2col-text-${uniqueId} {
+                width: ${finalTextWidth}% !important;
+                max-width: ${finalTextWidth}%;
+              }
+            }
+          `
+        }} />
+        <div className="flex flex-col md:flex-row md:gap-8 items-center -mx-4 md:mx-0">
           {/* Image Column - Always first on mobile */}
           <div
-            className={`relative w-full aspect-square order-1 ${
+            className={`bloc2col-image-${uniqueId} relative w-full aspect-square order-1 ${
               imagePosition === "left" ? "md:order-1" : "md:order-2"
             }`}
-            style={{
-              width: `${secondColumnWidth}%`,
-            }}
           >
             <Image
               src={imageSrc}
@@ -59,12 +90,11 @@ export function Bloc2Columns({
 
           {/* Text Column - Always second on mobile */}
           <div
-            className={`w-full px-4 py-8 md:px-0 md:py-0 order-2 ${
+            className={`bloc2col-text-${uniqueId} w-full px-4 py-8 md:px-0 md:py-0 order-2 ${
               imagePosition === "left" ? "md:order-2" : "md:order-1"
             }`}
             style={{
               color: textColor,
-              width: `${firstColumnWidth}%`,
             }}
           >
             {children}
