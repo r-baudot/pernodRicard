@@ -83,7 +83,7 @@ export const CustomPadding: Story = {
     text: defaultText,
     backgroundColor: '#800020',
     textColor: '#FFFFFF',
-    className: 'p-12',
+    classNameTxt: 'text-xl p-12',
   },
 };
 

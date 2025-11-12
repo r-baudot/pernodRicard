@@ -1,11 +1,5 @@
-export interface Brand {
-  id: string;
-  name: string;
-  description: string;
-  country: string;
-  imageUrl: string;
-  category: string;
-}
+// Brand type moved to types/brand.ts - import from there instead
+export type { Brand, BrandInsert } from './brand';
 
 export interface NavigationItem {
   label: string;

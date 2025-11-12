@@ -3,12 +3,14 @@ import { Hero } from "@/components/Hero";
 import { BrandGrid } from "@/components/BrandGrid";
 import { Footer } from "@/components/Footer";
 import { heroSlides } from "@/data/hero";
-import { brandsData } from "@/data/brands";
 import { Bloc } from "@/components/Bloc/Bloc";
 import { Bloc2Columns } from "@/components/Bloc2Columns/Bloc2Columns";
 import { DownloadLink } from "@/components/DownloadLink/DownloadLink";
+import { getBrands } from "@/lib/services/brands";
 
-export default function Home() {
+export default async function Home() {
+  // Fetch brands from Supabase
+  const brands = await getBrands();
   return (
     <main className="min-h-screen">
       <Header />
@@ -20,7 +22,6 @@ export default function Home() {
         textColor="#FFFFFF"
         classNameTxt="my-8 text-lg md:text-xl"
       />
-
       <Bloc2Columns
         imageSrc="/images/homepage/13.jpg.avif"
         imageAlt="Pernod Ricard"
@@ -65,7 +66,6 @@ export default function Home() {
           file="/pdf/Pernod_Ricard_IAR25_FRENCH.pdf"
         />
       </Bloc2Columns>
-
       <section className="py-16 bg-gradient-to-br from-accent-burgundy to-primary text-white">
         <div className="w-full px-4 lg:px-8 text-center">
           <h2 className="text-4xl font-serif font-bold mb-4">
@@ -84,8 +84,8 @@ export default function Home() {
           </a>
         </div>
       </section>
-
-      <BrandGrid brands={brandsData} />
+      <BrandGrid brands={brands} />
+      {/* supabase connection to get latest news data */}
       <section className="py-16 bg-white">
         <div className="w-full px-4 lg:px-8">
           <h2 className="text-4xl font-serif font-bold text-center mb-12">

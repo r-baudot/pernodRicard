@@ -20,12 +20,12 @@ const defaultContent = (
     </h2>
     <p className="text-base md:text-lg leading-relaxed mb-4">
       La convivialité est au cœur de tout ce que nous faisons, de nos vignobles
-      à nos distilleries, en passant par nos sites de production ainsi qu'au
+      à nos distilleries, en passant par nos sites de production ainsi qu&apos;au
       sein de nos bureaux présents à travers le monde.
     </p>
     <p className="text-base md:text-lg leading-relaxed">
       Nous nous engageons à offrir à nos consommateurs des produits et des
-      expériences à la pointe de l'innovation, tout en veillant à garantir un
+      expériences à la pointe de l&apos;innovation, tout en veillant à garantir un
       avenir durable, respectueux de notre environnement et riche de nos
       relations humaines.
     </p>
@@ -128,10 +128,10 @@ export const LightBackground: Story = {
     children: (
       <div>
         <h2 className="text-3xl md:text-4xl font-bold mb-4 leading-tight text-gray-900">
-          Un Héritage d'Excellence
+          Un Héritage d&apos;Excellence
         </h2>
         <p className="text-base md:text-lg leading-relaxed text-gray-700">
-          Depuis près de 50 ans, Pernod Ricard cultive l'art de la convivialité
+          Depuis près de 50 ans, Pernod Ricard cultive l&apos;art de la convivialité
           et du partage à travers ses marques premium et prestige.
         </p>
       </div>
