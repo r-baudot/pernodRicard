@@ -25,6 +25,7 @@ export function Header() {
               height={56}
               className="mt-[5px] -ml-[6px]"
               priority
+              unoptimized
             />
           </Link>
 

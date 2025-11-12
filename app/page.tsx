@@ -6,6 +6,7 @@ import { heroSlides } from "@/data/hero";
 import { Bloc } from "@/components/Bloc/Bloc";
 import { Bloc2Columns } from "@/components/Bloc2Columns/Bloc2Columns";
 import { DownloadLink } from "@/components/DownloadLink/DownloadLink";
+import { AnimatedLink } from "@/components/AnimatedLink/AnimatedLink";
 import { getBrands } from "@/lib/services/brands";
 
 export default async function Home() {
@@ -66,22 +67,28 @@ export default async function Home() {
           file="/pdf/Pernod_Ricard_IAR25_FRENCH.pdf"
         />
       </Bloc2Columns>
-      <section className="py-16 bg-gradient-to-br from-accent-burgundy to-primary text-white">
+      <section
+        className="py-16 text-white"
+        style={{
+          background: "linear-gradient(to bottom right, #7FA5D0, #5a8ab8)",
+        }}
+      >
         <div className="w-full px-4 lg:px-8 text-center">
           <h2 className="text-4xl font-serif font-bold mb-4">
-            Join our S&R Journey
+            Rejoignez-nous !
           </h2>
           <p className="text-lg mb-8 max-w-2xl mx-auto">
-            Our commitment to sustainability and responsibility drives
-            everything we do. Discover how we&apos;re building a better future
-            for all.
+            Découvrez nos opportunités de travail dans le monde entier, et
+            postulez dans l&apos;une des entreprises les plus dynamiques, dans
+            laquelle les relations humaines prennent tout leur sens.
           </p>
-          <a
+          <AnimatedLink
             href="/commitments"
-            className="inline-block bg-white text-primary px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors"
-          >
-            Learn About Our Commitments
-          </a>
+            text="En savoir plus"
+            showArrow={true}
+            arrowPosition="right"
+            variant="white"
+          />
         </div>
       </section>
       <BrandGrid brands={brands} />
